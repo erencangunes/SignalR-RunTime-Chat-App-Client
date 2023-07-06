@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="./assets/libs/bootstrap/js/bootstrap.min.js"></script>
+    <script src="./assets/libs/jquery/jquery.min.js"></script>
+    <script src="./assets/libs/signalr/signalr.min.js"></script>
+    <script src="./assets/js/main.js"></script>
+
+    <link rel="stylesheet" href="./assets/libs/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+
+    
+
+  </head>
+
+  <body>
+    
+    <div class="row pt-5">
+      <div class="col-md-1"></div>
+      <div class="col-md-10">
+        <div class="row">
+          <!-- Left Menu -->
+
+          <div class="col-md-3">
+          <!-- Room -->
+            <input id="txtRoomName" type="text" class="form-control form-control-lg disabled" placeholder="Room Name">
+            <button id="btnCreateRoom" type="button" class="btn btn-info mt-2 ">Create Room</button>
+
+            <select size="5" style="width: 100%;" class="form-select disabled mt-5 rooms" multiple>
+              <option value="-1" selected>Rooms</option>
+            </select>
+            <button id="btnEnterSelectedRooms" class="btn btn-primary  mt-2">Enter selected rooms</button>
+            <!--/ Room -->
+
+            <!-- Clients -->
+            <div class="list-group mt-5 clients">
+              <a class="list-group-item list-group-item-action users active">All</a>
+              <div id="_clients">
+
+              </div>
+            </div>
+            <!--/ Clients -->
+
+          </div>
+
+          <div class="col-md-6">
+
+            <div id="clientSituationMessages" class="alert alert-success" style="display: none;"></div>
+
+            <!-- Messages -->
+            <textarea id="txtMessage" class="form-control" rows="3">Enter message.</textarea>
+            <button id="btnSend" type="button" class="btn btn-light mt-2">Send</button>
+            <button id="btnSendGroup" type="button" class="btn btn-light mt-2">Send Group</button>
+
+            <div class="list-group mt-5 messageListGroup">
+              <a class="list-group-item list-group-item-action message" aria-current="true">
+                <div class="d-flex w-100 justify-content-between">
+                  <h5 class="mb-1"></h5>
+                  <h5 class="mb-2"></h5>
+                </div>
+                <p class="mb-1"></p>
+              </a>
+            </div>
+            <!--/ Messages -->
+          </div>
+
+          <div class="col-md-3">
+
+            <input id="txtNickName" type="text" class="form-control form-control-lg" placeholder="Name">
+            <button id="logIn" type="button" class="btn btn-success mt-2">Log In</button>
+
+          </div>
+
+        </div>
+      </div>
+      <div class="col-md-1"></div>
+    </div>
+    
+  </body>
+</html>
